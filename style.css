@@ -4,130 +4,131 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    background: #000 url('https://hamzeen.github.io/deprecated-landing/assets/bg_texture.png');
-    font: normal 16px/1.5 'Titillium Web';
-    color: #fff;
+  background: #000 url('https://hamzeen.github.io/deprecated-landing/assets/bg_texture.png');
+  font: normal 16px/1.5 'Titillium Web';
+  color: #fff;
 }
 
 h3 {
-    font: normal 62px/1.5 'Open Sans', 'Roboto', 'Open Sans Condensed', sans-serif;
-    color: #fff;
-    margin: 20px 0 15px 0;
-    text-align: left;
-    font-weight: 900;
+  font: normal 62px/1.5 'Open Sans', 'Roboto', 'Open Sans Condensed', sans-serif;
+  color: #fff;
+  margin: 20px 0 15px 0;
+  text-align: left;
+  font-weight: 900;
 }
 
 p {
-    font: 100 18px/1.5 'Titillium Web', Helvetica, Arial, sans-serif;
+  font: 100 18px/1.5 'Titillium Web', Helvetica, Arial, sans-serif;
 }
 p.instructions {
-    margin-bottom:20px;
+  margin-bottom:20px;
 }
 #copyright {
-    text-align: right;
+  text-align: right;
 }
 .container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
 }
 .app {
-    width: 100%;
-    position: relative;
-    border: 10px solid #FFF;
+  width: 100%;
+  position: relative;
+  border: 10px solid #F0F0F010;
+  /*border: 10px solid #FFF;*/
 }
 
 .app #start-camera {
-    display: none;
-    border-radius: 3px;
-    max-width: 400px;
-    color: #fff;
-    background-color: #448aff;
-    text-decoration: none;
-    padding: 15px;
-    opacity: 0.8;
-    margin: 50px auto;
-    text-align: center;
+  display: none;
+  border-radius: 3px;
+  max-width: 400px;
+  color: #fff;
+  background-color: #448aff;
+  text-decoration: none;
+  padding: 15px;
+  opacity: 0.8;
+  margin: 50px auto;
+  text-align: center;
 }
 
 .app video#camera-stream {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 
 .app img#snap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
 }
 
 .app #error-message {
-    width: 100%;
-    background-color: #ccc;
-    color: #9b9b9b;
-    font-size: 28px;
-    padding: 200px 100px;
-    text-align: center;
-    display: none;
+  width: 100%;
+  background-color: #ccc;
+  color: #9b9b9b;
+  font-size: 28px;
+  padding: 200px 100px;
+  text-align: center;
+  display: none;
 }
 
 .app .controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 20;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 20;
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 30px;
-    display: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px;
+  display: none;
 }
 
 .app .controls a {
-    border-radius: 50%;
-    color: #fff;
-    background-color: #111;
-    text-decoration: none;
-    padding: 15px;
-    line-height: 0;
-    opacity: 0.7;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #111;
+  text-decoration: none;
+  padding: 15px;
+  line-height: 0;
+  opacity: 0.7;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .app .controls a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .app .controls a.disabled {
-    background-color: #555;
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
+  background-color: #555;
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
 .app .controls a.disabled:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .app .controls a i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .app .controls #take-photo i {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .app canvas { display: none;}
@@ -135,27 +136,27 @@ p.instructions {
 .app video#camera-stream.visible,
 .app img#snap.visible,
 .app #error-message.visible {
-    display: block;
+  display: block;
 }
 
 .app .controls.visible {
-    display: flex;
+  display: flex;
 }
 
 
 /* vertical navigation */
 a {
-    color: #fff; text-decoration: none;
+  color: #fff; text-decoration: none;
 }
 ol, ul, li {
     list-style: none;
 }
 .menu-item-link {
-    position: relative;
-    padding: 10px;
-    font: normal 14px/17px "Titillium Web", "Roboto",sans-serif;
-    font-weight:400;
-    letter-spacing: 5px;
+  position: relative;
+  padding: 10px;
+  font: normal 14px/17px "Titillium Web", "Roboto",sans-serif;
+  font-weight:400;
+  letter-spacing: 5px;
 }
 .main-menu {
     position: fixed;
@@ -186,7 +187,7 @@ ol, ul, li {
     background-color: #b77932;
 }
 .menu-item {
-    display: inline-block; margin-left: 15px;
+  display: inline-block; margin-left: 15px;
 }
 .menu-item-link {
     opacity: 0.5;
@@ -224,43 +225,91 @@ ol, ul, li {
 
 
 @media (max-width: 1075px) {
-    .container {
-        margin: 40px;
-    }
+  .container {
+    margin: 40px;
+  }
 
-    .app #start-camera.visible {
-        display: block;
-    }
+  .app #start-camera.visible {
+    display: block;
+  }
 
-    .app .controls a i {
-        font-size: 16px;
-    }
-    .app .controls #take-photo i {
-        font-size: 24px;
-    }
+  .app .controls a i {
+    font-size: 16px;
+  }
+  .app .controls #take-photo i {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 520px) {
-    .container { margin: 40px 2px;}
+  .container { margin: 40px 2px;}
 
-    .app #error-message {
-        padding: 80px 50px;
-        font-size: 18px;
-    }
-    .app .controls a i {
-        font-size: 12px;
-    }
-    .app .controls #take-photo i {
-        font-size: 18px;
-    }
+  .app #error-message {
+    padding: 80px 50px;
+    font-size: 18px;
+  }
+  .app .controls a i {
+    font-size: 12px;
+  }
+  .app .controls #take-photo i {
+    font-size: 18px;
+  }
+  
+  .main-menu {
+    position: absolute;
+    left: 9px;
+    top: 2px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+    transform: translate(0%, 0%) rotate(0deg);
+    -webkit-transform-origin: 0% 0;
+    transform-origin: 0% 0;
+  }
+}
 
-    .main-menu {
-        position: absolute;
-        left: 9px;
-        top: 2px;
-        -webkit-transform: translate(0%, 0%) rotate(0deg);
-        transform: translate(0%, 0%) rotate(0deg);
-        -webkit-transform-origin: 0% 0;
-        transform-origin: 0% 0;
-    }
+#results-container {
+  height: 50px;
+  margin-top: -15px;
+}
+
+
+#color-result {
+  /*border: 3px solid #FFF;*/
+  width: auto;
+  height:auto;
+  padding: 10px 15px 10px 10px;
+  background: #3b44585e;
+  float: right;
+  transition: all .2s ease-out;
+}
+#color-result.hide {
+  opacity: 0 !important;
+  transform: translateY(-10px) translateZ(0);
+}
+
+.color-box {
+  height: 25px;
+  width: 35px;
+  background: #f20;
+  float:left;
+  border: 3px solid #fff;
+  transition: all .15s ease-out;
+}
+.color-box.hide {
+  opacity: 0 !important;
+  transform: translateY(-10px) translateZ(0);
+}
+
+.color-code {
+  float:left;
+  line-height: 30px;
+  width: auto;
+  margin-left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: normal 19px/1.5 'Roboto', 'Titillium Web';
+  transition: all .38s ease-out;
+}
+.color-code.hide {
+  opacity: 0 !important;
+  transform: translateY(10px) translateZ(0);
 }
